@@ -1,0 +1,2 @@
+# BlueCorridor
+Next.js project
