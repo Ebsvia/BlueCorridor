@@ -1,0 +1,18 @@
+{
+  "links": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+
+    {
+      "label": "Browse",
+      "href": "/browse"
+    },
+
+    {
+      "label": "Profile",
+      "href": "/profile"
+    }
+  ]
+}
