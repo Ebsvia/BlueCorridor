@@ -1,0 +1,51 @@
+.navbar{
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    height: 50px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container span{
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 80px;
+
+
+}
+
+.links-container{
+    display: flex;
+    width: 450px;
+    justify-content: space-evenly;
+    margin-right: 80px;
+}
+
+.link a{
+ text-decoration: none;
+ color: rgb(100, 99, 99);
+}
+
+.link a:hover {
+    text-decoration: none;
+    color: rgb(2, 2, 102)
+}
+
+.login{
+    background-color: #c8c8c8; /* Green */
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 75px;
+  
+}
+
+.login a:hover {
+    text-decoration: none;
+    color: rgb(2, 2, 102)
+}
