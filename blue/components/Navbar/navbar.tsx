@@ -23,11 +23,7 @@ const Nav: React.FC<{}> = () => {
             </div>
           );
         })}
-        <div className={styles["login"]}>
-          <a href="/login">
-          Login
-          </a>
-        </div>
+       
       </div>
     </nav>
   );
