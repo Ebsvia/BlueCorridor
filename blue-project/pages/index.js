@@ -5,6 +5,7 @@ import axios from "axios";
 export default function Home() {
   const [input, setInput] = useState("");
   const [user, setUser] = useState([]);
+  const [updateUI, setUpdateUI] = useState(false);
   const handleSubmit = (e) => {
     //event as argument
     e.preventDefault();
@@ -14,6 +15,7 @@ export default function Home() {
       .then((res) => {
         console.log(res);
         setInput("");
+        setUpdateUI(true);
       })
       .catch((err) => console.log(err));
   };
@@ -23,7 +25,7 @@ export default function Home() {
       setUser(res.data);
       console.log(res.data);
     });
-  }, []);
+  }, [updateUI]);
   return (
     <>
       <div>
