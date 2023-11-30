@@ -1,10 +1,51 @@
 import Navbar from "../components/navbar";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const Home = () => (
-  <div>
-    <Navbar />
-    <h1>Landing Page</h1>
-  </div>
-);
+export default function Home() {
+  const [input, setInput] = useState("");
+  const [user, setUser] = useState([]);
+  const handleSubmit = (e) => {
+    //event as argument
+    e.preventDefault();
 
-export default Home;
+    axios
+      .post(`/api/set_user`, { user: input })
+      .then((res) => {
+        console.log(res);
+        setInput("");
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    axios.get(`/api/get_user`).then((res) => {
+      setUser(res.data);
+      console.log(res.data);
+    });
+  }, []);
+  return (
+    <>
+      <div>
+        <Navbar />
+        <h1>Landing Page</h1>
+      </div>
+      <main>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Submit</button>
+        </form>
+
+        <ul>
+          {user.map((t) => (
+            <li key={t._id}>{t.user}</li>
+          ))}
+        </ul>
+      </main>
+    </>
+  );
+}

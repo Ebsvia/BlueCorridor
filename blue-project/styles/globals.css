@@ -1,0 +1,15 @@
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+input,
+button {
+  padding: 10px 20px;
+}
